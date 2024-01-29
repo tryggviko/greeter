@@ -2,10 +2,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		Greeter greeter = new Greeter();
+		UserInterface ui = new UserInterface();
+		String greeting;
+
 		greeter.setEnglish();
-		System.out.println(greeter.greet());
+		greeting=greeter.greet();
+        ui.show(greeting);
+
 		greeter.setGerman();
-		System.out.println(greeter.greet());
+		greeting=greeter.greet();
+		ui.show(greeting);
 	}
 
 }
